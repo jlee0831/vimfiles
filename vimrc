@@ -203,12 +203,24 @@ let g:vroom_map_keys = 0
 let g:vroom_write_all = 1
 let g:vroom_use_zeus = 0
 let g:vroom_use_bundle_exec = 0
-let g:vroom_spec_command = '`([ -e .zeus.sock ] && echo "zeus ") || ([ -e bin/rspec ] && echo "bin/") || echo "bundle exec "`rspec '
+let g:vroom_spec_command = '`([ -e .zeus.sock ] && echo "zeus ") || ([ -e bin/rspec ] && echo "bin/") || echo "bundle exec "`rspec --tty '
 let g:vroom_cucumber_path = '`([ -e .zeus.sock ] && echo zeus) || echo bundle exec` cucumber -r features '
 map <leader>t :VroomRunTestFile<cr>
 map <leader>T :VroomRunNearestTest<cr>
 autocmd BufNewFile,BufRead *_spec.coffee map <buffer> <leader>t :!guard-jasmine -s=none -p=3000 %<cr>
 autocmd BufNewFile,BufRead *_spec.js map <buffer> <leader>t :!guard-jasmine -s=none -p=3000 %<cr>
+map <leader>? :VroomOpenIt<cr>
+autocmd BufNewFile,BufRead *_spec.rb compiler rspec | execute "set makeprg=" . zeus_or_bundle . "\\ rspec"
+autocmd BufNewFile,BufRead *.feature compiler cucumber | execute "set makeprg=" . zeus_or_bundle . "\\ cucumber"
+
+Bundle 'tpope/vim-dispatch'
+
+let zeus_or_bundle = '$(if\ [\ -e\ .zeus.sock\ ];\ then\ echo\ zeus;\ elif\ [\ -e\ Gemfile\ ];\ then\ echo\ bundle\ exec;\ fi)'
+
+" map <leader>t :Dispatch<cr>
+" map <leader>? :Copen!<cr>
+" autocmd BufNewFile,BufRead *_spec.rb compiler rspec | map <buffer> <leader>t :Focus _ %<cr>:Dispatch<cr> | execute "set makeprg=" . zeus_or_bundle . "\\ rspec"
+" autocmd BufNewFile,BufRead *.feature compiler cucumber | map <buffer> <leader>t :Focus _ %<cr>:Dispatch<cr>| execute "set makeprg=" . zeus_or_bundle . "\\ cucumber"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim coffeescript runtime files
