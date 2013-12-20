@@ -408,6 +408,14 @@ vmap <Leader>t :call I18nTranslateString()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'heartsentwined/vim-emblem'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nerdtree
+"
+" directory sidebar pane
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'scrooloose/nerdtree'
+map <C-n> :NERDTreeToggle<CR>
+
 :runtime macros/matchit.vim
 
 filetype plugin indent on
