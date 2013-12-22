@@ -482,7 +482,7 @@ nmap <leader>md :silent !mkdir -p %:h<CR>:redraw!<CR>
 set scrolloff=2
 
 " Make the window we're on as big as it makes sense to make it
-set winwidth=84
+" set winwidth=84
 
 " We have to have a winheight bigger than we want to set winminheight. But if
 " we set winheight to be huge before winminheight, the winminheight set will
