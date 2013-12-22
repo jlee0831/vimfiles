@@ -280,11 +280,6 @@ Bundle 'nono/vim-handlebars'
 Bundle 'itspriddle/vim-jquery'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim syntax for jst files
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'jeyb/vim-jst'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntax for nginx
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'mutewinter/nginx.vim'
@@ -301,49 +296,15 @@ Bundle 'ap/vim-css-color'
 Bundle 'mrtazz/molokai.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Decent light color scheme
+" Lightweight statusline utility
+" Should install inconsolata-g font (included in fonts directory)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'nelstrom/vim-mac-classic-theme'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Powerline
-"
-" The ultimate vim statusline utility
-"
-" You'll need a powerline patched font.
-" You should probably use inconsolata-g (included in fonts directory)
-"
-" If not, you can patch your own.
-" See: https://github.com/Lokaltog/vim-powerline/tree/develop/fontpatcher
-" You'll probably need this too: https://github.com/jenius/Fontforge-Installer
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'Lokaltog/vim-powerline'
-
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_stl_path_style = 'relative'
-call Pl#Theme#RemoveSegment('fugitive:branch')
-call Pl#Theme#RemoveSegment('fileformat')
-call Pl#Theme#RemoveSegment('fileencoding')
-call Pl#Theme#RemoveSegment('scrollpercent')
-autocmd FocusGained * call Pl#UpdateStatusline(1)
-autocmd FocusLost * call Pl#UpdateStatusline(0)
+Bundle 'bling/vim-airline'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " makes the command line behave like emacs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'houtsnip/vim-emacscommandline'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Adds gr command to replace text (takes a motion)
-" similar to v(motion)p but also cuts text into black hole register so it is
-" repeatable. So really it's similar to v(motion)"_p
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'ReplaceWithRegister'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Just open a YAML file and hit `⌘r` or `<leader>r`. Again to go back.
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'henrik/vim-yaml-flattener'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " xmpfilter
@@ -371,21 +332,6 @@ imap <buffer> <F4> <Plug>(xmpfilter-mark)
 Bundle 'conormcd/matchindent.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vitality.vim
-"
-" Add FocusGained/FocusLost back.
-" Requires features in HEAD tmux.
-"
-" Using my branch until tmux supports this in a released version.
-" Also this should make it so that anyone else who uses this w/o
-" the right version of tmux will be fine.
-" https://github.com/aaronjensen/vitality.vim/commit/3308bf21fb3d46d55ca84a19d228f8cf2210679d
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'aaronjensen/vitality.vim'
-let g:vitality_fix_focus = 1
-let g:vitality_fix_cursor = 0
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-marked
 "
 " Opens current file in Marked, an OSX markdown preview app:
@@ -400,13 +346,6 @@ Bundle 'itspriddle/vim-marked'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'stefanoverna/vim-i18n'
 vmap <Leader>t :call I18nTranslateString()<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-emblem
-"
-" Syntax highlighting for emblem
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'heartsentwined/vim-emblem'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdtree
