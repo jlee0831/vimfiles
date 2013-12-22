@@ -307,23 +307,6 @@ Bundle 'bling/vim-airline'
 Bundle 'houtsnip/vim-emacscommandline'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" xmpfilter
-"
-" Lets you execute ruby code in a buffer. Results will be output
-" after any #=>. You can press F4 to insert a #=> on the current line and f5
-" runs the entire buffer.
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 't9md/vim-ruby-xmpfilter'
-
-nmap <buffer> <F5> <Plug>(xmpfilter-run)
-xmap <buffer> <F5> <Plug>(xmpfilter-run)
-imap <buffer> <F5> <Plug>(xmpfilter-run)
-
-nmap <buffer> <F4> <Plug>(xmpfilter-mark)
-xmap <buffer> <F4> <Plug>(xmpfilter-mark)
-imap <buffer> <F4> <Plug>(xmpfilter-mark)
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " matchindent.vim
 "
 " Attempt to guess and automatically set the indentation settings of the
