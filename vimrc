@@ -335,8 +335,15 @@ vmap <Leader>t :call I18nTranslateString()<CR>
 "
 " directory sidebar pane
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'scrooloose/nerdtree'
-map <C-n> :NERDTreeToggle<CR>
+" Bundle 'scrooloose/nerdtree'
+" map <C-n> :NERDTreeToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" netrw
+"
+" make netrw behave more like nerdtree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <C-n> :Vex .<CR><C-w>H
 
 :runtime macros/matchit.vim
 
