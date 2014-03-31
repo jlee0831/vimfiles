@@ -36,6 +36,8 @@ map <leader>gc :Gcommit<cr>
 map <leader>ga :Git add --all<cr>:Gcommit<cr>
 map <leader>gb :Gblame<cr>
 
+imap jk <Esc>
+
 " Use j/k in status
 " function! BufReadIndex()
 "   setlocal cursorline
